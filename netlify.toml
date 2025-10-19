@@ -1,6 +1,20 @@
 [build]
   publish = "."
 
+# Redirect everything to the root HTTPS domain
+[[redirects]]
+  from = "http://*"
+  to = "https://inprose.co.uk/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.inprose.co.uk/*"
+  to = "https://inprose.co.uk/:splat"
+  status = 301
+  force = true
+
+# Fallback so Supabase auth or deep links still load your page
 [[redirects]]
   from = "/*"
   to = "/index.html"
