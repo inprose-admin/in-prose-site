@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>in prose – Books and data — perfectly bound.</title>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --accent: #FF7F32;
@@ -32,6 +32,7 @@
       margin-bottom: 2rem;
     }
 
+    /* Orange band container */
     .orange-band {
       background: var(--accent);
       width: 100%;
@@ -42,23 +43,27 @@
       align-items: center;
     }
 
-    .orange-band h1 {
+    /* Text styles matching your Font.Theme */
+    h1 {
       text-transform: lowercase;
-      font-size: 2rem;
+      font-weight: 700;              /* CrimsonText-Bold */
+      font-size: 28px;               /* largeTitle */
       color: #000;
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.4rem;
     }
 
-    .orange-band p {
-      font-size: 1.25rem;
+    p.tagline {
+      font-weight: 400;              /* CrimsonText-Regular */
+      font-size: 18px;               /* subtitle */
       color: #000;
-      margin: 0.25rem 0;
+      margin: 0.2rem 0;
     }
 
-    .orange-band .comingsoon {
+    p.comingsoon {
+      font-weight: 400;
+      font-size: 18px;               /* subtitle */
+      color: #000;
       margin-top: 1rem;
-      font-size: 1.1rem;
-      color: #000;
     }
 
     @media (max-width: 600px) {
@@ -69,22 +74,19 @@
       .orange-band {
         height: 40vh;
       }
-      .orange-band h1 {
-        font-size: 1.6rem;
-      }
-      .orange-band p {
-        font-size: 1.1rem;
-      }
+      h1 { font-size: 24px; }
+      p.tagline, p.comingsoon { font-size: 16px; }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="inprose-logo.png" alt="in prose logo">
+    <img src="logo.png" alt="in prose logo">
   </header>
+
   <div class="orange-band">
     <h1>in prose</h1>
-    <p>Books and data — perfectly bound.</p>
+    <p class="tagline">Books and data — perfectly bound.</p>
     <p class="comingsoon">Coming soon</p>
   </div>
 </body>
