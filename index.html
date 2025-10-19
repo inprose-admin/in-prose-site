@@ -8,68 +8,80 @@
   <style>
     :root {
       --accent: #FF7F32;
-      --bg: #F8F6F2;
+      --bg-medium: #F4DCC2;
       --text: #1b1b1b;
     }
 
-    * { box-sizing: border-box; }
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
       font-family: "Crimson Text", serif;
-      background: var(--bg);
+      background: var(--bg-medium);
       color: var(--text);
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      min-height: 100svh;
       text-align: center;
-    }
-
-    header img {
-      width: 120px;
-      height: auto;
-      margin-bottom: 2rem;
-    }
-
-    h1 {
-      text-transform: lowercase;
-      font-size: 2rem;
-      margin: 0 0 0.25rem;
-    }
-
-    p.tagline {
-      font-size: 1.25rem;
-      margin: 0 0 2rem;
     }
 
     .orange-band {
       background: var(--accent);
       width: 100%;
-      height: 20vh; /* roughly 1/5 of screen height */
+      height: 30vh;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
     }
 
-    .orange-band p {
+    .orange-band img {
+      width: 120px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    .orange-band h1 {
+      text-transform: lowercase;
+      font-size: 2rem;
       color: #000;
+      margin-bottom: 0.25rem;
+    }
+
+    .orange-band p {
       font-size: 1.25rem;
-      margin: 0;
+      color: #000;
+      margin: 0.25rem 0;
+    }
+
+    .orange-band .comingsoon {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      color: #000;
+    }
+
+    @media (max-width: 600px) {
+      .orange-band {
+        height: 40vh;
+      }
+      .orange-band img {
+        width: 90px;
+      }
+      .orange-band h1 {
+        font-size: 1.6rem;
+      }
+      .orange-band p {
+        font-size: 1.1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="inprose-logo.png" alt="in prose logo">
-  </header>
-  <main>
-    <h1>in prose</h1>
-    <p class="tagline">Books and data — perfectly bound.</p>
-  </main>
   <div class="orange-band">
-    <p>Coming soon</p>
+    <img src="inprose-logo.png" alt="in prose logo">
+    <h1>in prose</h1>
+    <p>Books and data — perfectly bound.</p>
+    <p class="comingsoon">Coming soon</p>
   </div>
 </body>
 </html>
