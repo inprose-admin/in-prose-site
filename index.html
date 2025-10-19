@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>In Prose – Books and data — perfectly bound.</title>
+  <title>in prose – Books and data — perfectly bound.</title>
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -11,57 +11,65 @@
       --bg: #F8F6F2;
       --text: #1b1b1b;
     }
+
     * { box-sizing: border-box; }
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
+      height: 100%;
       font-family: "Crimson Text", serif;
       background: var(--bg);
       color: var(--text);
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      min-height: 100svh;
+      align-items: center;
       text-align: center;
-      padding: 2rem;
     }
+
     header img {
       width: 120px;
       height: auto;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
+
     h1 {
+      text-transform: lowercase;
       font-size: 2rem;
-      margin: 0 0 .5rem;
-      letter-spacing: .3px;
+      margin: 0 0 0.25rem;
     }
+
     p.tagline {
       font-size: 1.25rem;
       margin: 0 0 2rem;
     }
-    p.comingsoon {
-      font-size: 1.1rem;
-      color: var(--accent);
+
+    .orange-band {
+      background: var(--accent);
+      width: 100%;
+      height: 20vh; /* roughly 1/5 of screen height */
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    a.button {
-      display:inline-block;
-      margin-top:2rem;
-      padding:.5rem 1.25rem;
-      background:var(--accent);
-      color:var(--bg);
-      text-decoration:none;
-      border-radius:8px;
+
+    .orange-band p {
+      color: #000;
+      font-size: 1.25rem;
+      margin: 0;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="In Prose logo">
+    <img src="logo.png" alt="in prose logo">
   </header>
   <main>
-    <h1>In Prose</h1>
+    <h1>in prose</h1>
     <p class="tagline">Books and data — perfectly bound.</p>
-    <p class="comingsoon">Coming soon</p>
   </main>
+  <div class="orange-band">
+    <p>Coming soon</p>
+  </div>
 </body>
 </html>
