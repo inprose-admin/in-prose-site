@@ -19,10 +19,17 @@
       background: var(--bg-medium);
       color: var(--text);
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100svh;
       text-align: center;
+    }
+
+    header img {
+      width: 120px;
+      height: auto;
+      margin-bottom: 2rem;
     }
 
     .orange-band {
@@ -33,12 +40,6 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-    }
-
-    .orange-band img {
-      width: 120px;
-      height: auto;
-      margin-bottom: 1rem;
     }
 
     .orange-band h1 {
@@ -61,11 +62,12 @@
     }
 
     @media (max-width: 600px) {
+      header img {
+        width: 90px;
+        margin-bottom: 1.5rem;
+      }
       .orange-band {
         height: 40vh;
-      }
-      .orange-band img {
-        width: 90px;
       }
       .orange-band h1 {
         font-size: 1.6rem;
@@ -77,8 +79,10 @@
   </style>
 </head>
 <body>
+  <header>
+    <img src="logo.png" alt="in prose logo">
+  </header>
   <div class="orange-band">
-    <img src="inprose-logo.png" alt="in prose logo">
     <h1>in prose</h1>
     <p>Books and data — perfectly bound.</p>
     <p class="comingsoon">Coming soon</p>
